@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Megha Kundu | AI/ML & Data Science Portfolio</title>
+  <meta name="description" content="Portfolio of Megha Kundu – AI/ML & Data Science Enthusiast. Explore projects, skills, and experience in Machine Learning, NLP, and Front-End Development." />
+  <meta name="keywords" content="Megha Kundu, AI, ML, Data Science, Portfolio, Python, NLP, Machine Learning" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Locomotive Scroll CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" data-scroll-to="#hero">
+        <span class="logo-bracket">&lt;</span>MK<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" data-scroll-to="#about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-scroll-to="#skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-scroll-to="#experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-scroll-to="#projects">Projects</a></li>
+        <li><a href="#achievements" class="nav-link" data-scroll-to="#achievements">Achievements</a></li>
+        <li><a href="#participations" class="nav-link" data-scroll-to="#participations">Participations</a></li>
+        <li><a href="#contact" class="nav-link" data-scroll-to="#contact">Contact</a></li>
+      </ul>
+      <a href="RESUMe.pdf" download class="nav-cta" id="resumeBtn">
+        <i class="fas fa-download"></i> Resume
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Smooth Scroll Container -->
+  <div id="smooth-wrapper" data-scroll-container>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero" data-scroll-section>
+      <div class="hero-bg-overlay"></div>
+      <canvas id="particleCanvas"></canvas>
+
+      <div class="hero-content">
+        <div class="hero-badge" data-scroll data-scroll-speed="1">
+          <span class="badge-dot"></span>
+          <span id="badgeText">Available for Internship</span>
+        </div>
+
+        <h1 class="hero-title" data-scroll data-scroll-speed="1.5">
+          <span class="title-line">Hi, I'm</span>
+          <span class="title-name" id="typedName">Megha Kundu</span>
+          <span class="title-role" id="typewriterText"></span>
+        </h1>
+
+        <p class="hero-desc" data-scroll data-scroll-speed="1">
+          Motivated CS student passionate about Machine Learning, NLP, and building data-driven solutions that solve real-world problems.
+        </p>
+
+        <div class="hero-actions" data-scroll data-scroll-speed="0.8">
+          <a href="#projects" class="btn btn-primary" data-scroll-to="#projects">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-ghost" data-scroll-to="#contact">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+
+        <div class="hero-stats" data-scroll data-scroll-speed="0.6">
+          <div class="stat-item">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">ML Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">7.9</span>
+            <span class="stat-label">CGPA</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Research Intern</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-scroll data-scroll-speed="-1">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-ring ring-3"></div>
+        <div class="hero-avatar">
+          <div class="avatar-inner">
+            <img src="assets/images/megha.jpg" alt="Megha Kundu" class="avatar-img" />
+          </div>
+          <div class="avatar-orbit-dot dot-1"></div>
+          <div class="avatar-orbit-dot dot-2"></div>
+          <div class="avatar-orbit-dot dot-3"></div>
+        </div>
+        <div class="tech-chips">
+          <span class="tech-chip chip-1">Python</span>
+          <span class="tech-chip chip-2">NLP</span>
+          <span class="tech-chip chip-3">ML</span>
+          <span class="tech-chip chip-4">Data Science</span>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" data-scroll data-scroll-speed="0.5">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about" id="about" data-scroll-section>
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-class="is-inview">
+          <span class="section-tag">Who I Am</span>
+          <h2 class="section-title">About <span class="highlight">Me</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text" data-scroll data-scroll-class="is-inview">
+            <div class="glass-card about-card">
+              <div class="card-glow"></div>
+              <p class="about-para">
+                I'm a <strong>Computer Science student</strong> at Jaypee University of Engineering and Technology (2023–2027), deeply passionate about the intersection of Artificial Intelligence, Machine Learning, and real-world problem solving.
+              </p>
+              <p class="about-para">
+                With hands-on experience building ML models for tasks like <strong>fake news detection</strong>, <strong>job role recommendation</strong>, and <strong>demand forecasting</strong>, I thrive on turning complex data into meaningful insights.
+              </p>
+              <p class="about-para">
+                As a <strong>Research Intern at NIT Durgapur</strong>, I worked on cutting-edge NLP research — gaining deep expertise in data preprocessing, feature extraction, and classification algorithms.
+              </p>
+              <div class="about-info-grid">
+                <div class="info-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>West Bengal, India</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>B.Tech CS, JUET</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-calendar"></i>
+                  <span>2023 – 2027</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-star"></i>
+                  <span>CGPA: 7.9</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual" data-scroll data-scroll-class="is-inview">
+            <div class="education-card glass-card">
+              <div class="card-glow"></div>
+              <div class="edu-icon"><i class="fas fa-university"></i></div>
+              <h3>Education</h3>
+              <div class="edu-item">
+                <div class="edu-degree">B.Tech – Computer Science</div>
+                <div class="edu-school">Jaypee University of Engineering and Technology</div>
+                <div class="edu-meta">
+                  <span class="edu-year">2023 – 2027</span>
+                  <span class="edu-cgpa">CGPA: 7.9</span>
+                </div>
+              </div>
+              <div class="edu-bar">
+                <div class="edu-bar-fill" style="width:77%"></div>
+              </div>
+            </div>
+
+            <div class="summary-card glass-card">
+              <div class="card-glow"></div>
+              <div class="summary-icon"><i class="fas fa-code"></i></div>
+              <h3>Professional Summary</h3>
+              <p>Bridging the gap between data and decisions through innovative ML and NLP solutions.</p>
+              <div class="summary-tags">
+                <span>Problem Solver</span>
+                <span>Data Driven</span>
+                <span>Quick Learner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="skills" id="skills" data-scroll-section>
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-class="is-inview">
+          <span class="section-tag">Expertise</span>
+          <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-category glass-card" data-scroll data-scroll-class="is-inview">
+            <div class="card-glow"></div>
+            <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+            <h3>Programming</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span>Python</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>C++</span><span>70%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category glass-card" data-scroll data-scroll-class="is-inview">
+            <div class="card-glow"></div>
+            <div class="skill-cat-icon"><i class="fas fa-brain"></i></div>
+            <h3>Machine Learning</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span>NLP & TF-IDF</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Classification Algorithms</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>KNN & Cosine Similarity</span><span>78%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category glass-card" data-scroll data-scroll-class="is-inview">
+            <div class="card-glow"></div>
+            <div class="skill-cat-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3>Data Science</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span>Data Analysis</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Data Preprocessing</span><span>88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Feature Engineering</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category glass-card" data-scroll data-scroll-class="is-inview">
+            <div class="card-glow"></div>
+            <div class="skill-cat-icon"><i class="fas fa-globe"></i></div>
+            <h3>Web & Tools</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info"><span>HTML / CSS / JS</span><span>75%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>MySQL</span><span>70%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Figma</span><span>65%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Pills -->
+        <div class="tech-pills-row" data-scroll data-scroll-class="is-inview">
+          <div class="tech-pills">
+            <span class="pill">Python</span>
+            <span class="pill">C++</span>
+            <span class="pill">NLP</span>
+            <span class="pill">TF-IDF</span>
+            <span class="pill">KNN</span>
+            <span class="pill">Cosine Similarity</span>
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">MySQL</span>
+            <span class="pill">Figma</span>
+            <span class="pill">Classification Algorithms</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section class="experience" id="experience" data-scroll-section>
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-class="is-inview">
+          <span class="section-tag">Work History</span>
+          <h2 class="section-title">My <span class="highlight">Experience</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-item" data-scroll data-scroll-class="is-inview">
+            <div class="timeline-dot">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="timeline-card glass-card">
+              <div class="card-glow"></div>
+              <div class="timeline-header">
+                <div class="timeline-title-group">
+                  <h3>Research Intern</h3>
+                  <span class="timeline-company">NIT Durgapur</span>
+                </div>
+                <div class="timeline-period">
+                  <i class="fas fa-calendar-alt"></i>
+                  <span>June 2025 – July 2025</span>
+                </div>
+              </div>
+              <div class="timeline-badge">Research & Development</div>
+              <ul class="timeline-points">
+                <li><i class="fas fa-chevron-right"></i> Conducted research on <strong>Fake News Detection</strong> using ML and NLP techniques</li>
+                <li><i class="fas fa-chevron-right"></i> Performed data cleaning, <strong>preprocessing, and feature extraction</strong> using Python</li>
+                <li><i class="fas fa-chevron-right"></i> Built and evaluated models using <strong>classification algorithms</strong> and performance metrics</li>
+              </ul>
+              <div class="timeline-tech-tags">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>ML</span>
+                <span>Data Preprocessing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="projects" id="projects" data-scroll-section>
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-class="is-inview">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <div class="project-card glass-card" data-scroll data-scroll-class="is-inview" id="proj1">
+            <div class="card-glow"></div>
+            <div class="project-number">01</div>
+            <div class="project-icon-wrapper">
+              <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+            </div>
+            <h3 class="project-title">Fake News Detection System</h3>
+            <p class="project-desc">
+              Built an ML model using Python and NLP techniques to classify and detect fake news articles with high accuracy using TF-IDF and classification algorithms.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>NLP</span>
+              <span>TF-IDF</span>
+              <span>Classification</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-label">Evaluation</span>
+                <span class="metric-val">F1-Score</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Type</span>
+                <span class="metric-val">NLP / ML</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View Project">
+                <i class="fas fa-external-link-alt"></i> View Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card glass-card featured" data-scroll data-scroll-class="is-inview" id="proj2">
+            <div class="card-glow"></div>
+            <div class="project-badge">Featured</div>
+            <div class="project-number">02</div>
+            <div class="project-icon-wrapper">
+              <div class="project-icon"><i class="fas fa-briefcase"></i></div>
+            </div>
+            <h3 class="project-title">Job Role Recommendation System</h3>
+            <p class="project-desc">
+              Developed a sophisticated recommendation system using content-based and collaborative filtering with TF-IDF, Cosine Similarity, and KNN for enhanced accuracy.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>KNN</span>
+              <span>Cosine Similarity</span>
+              <span>TF-IDF</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-label">Approach</span>
+                <span class="metric-val">Hybrid Filtering</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Type</span>
+                <span class="metric-val">Recommendation</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View Project">
+                <i class="fas fa-external-link-alt"></i> View Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card glass-card" data-scroll data-scroll-class="is-inview" id="proj3">
+            <div class="card-glow"></div>
+            <div class="project-badge">Completed</div>
+            <div class="project-number">03</div>
+            <div class="project-icon-wrapper">
+              <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+            </div>
+            <h3 class="project-title">AI Demand Forecasting System</h3>
+            <p class="project-desc">
+              Developed an ML model for demand forecasting using time-series analysis, performing data preprocessing, feature engineering, and comprehensive model evaluation.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Time-Series</span>
+              <span>Feature Engineering</span>
+              <span>ML</span>
+            </div>
+            <div class="project-metrics">
+              <div class="metric">
+                <span class="metric-label">Method</span>
+                <span class="metric-val">Time-Series Analysis</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Status</span>
+                <span class="metric-val">Completed</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View Project">
+                <i class="fas fa-external-link-alt"></i> View Project
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS SECTION ===== -->
+    <section class="achievements" id="achievements" data-scroll-section>
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-class="is-inview">
+          <span class="section-tag">Recognition</span>
+          <h2 class="section-title">Achievements & <span class="highlight">Interests</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-card glass-card" data-scroll data-scroll-class="is-inview">
+            <div class="card-glow"></div>
+            <div class="ach-icon-wrap">
+              <div class="ach-icon gold"><i class="fas fa-trophy"></i></div>
+            </div>
+            <h3>1st Runner Up - Vertex Ideathon 25</h3>
+            <p>Secured the 1st Runner Up position as <strong>Team Rebin</strong>, showing outstanding performance in the Innovation Fest VERTEX 25 held at Jaypee University of Engineering and Technology, Guna.</p>
+            <div class="ach-badge" style="margin-bottom: 1rem;">🥈 Silver Medal</div>
+            <button class="pill cert-btn" id="viewCertBtn" data-img="vertex-certificate.jpg" style="border: 1px solid var(--accent); background: rgba(6,182,212,0.1); color: #fff; cursor: pointer;">
+              <i class="fas fa-external-link-alt"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- Extracurriculars -->
+        <div class="extras-section" data-scroll data-scroll-class="is-inview">
+          <h3 class="extras-title">Extracurricular & Interests</h3>
+          <div class="extras-grid">
+            <div class="extra-card glass-card">
+              <div class="card-glow"></div>
+              <div class="extra-icon"><i class="fas fa-theater-masks"></i></div>
+              <h4>Drama Club</h4>
+              <p>Member of College Drama Club — honing team collaboration and public performance skills</p>
+            </div>
+            <div class="extra-card glass-card">
+              <div class="card-glow"></div>
+              <div class="extra-icon"><i class="fas fa-leaf"></i></div>
+              <h4>Gardening</h4>
+              <p>Passionate about sustainable gardening and environmental consciousness</p>
+            </div>
+            <div class="extra-card glass-card">
+              <div class="card-glow"></div>
+              <div class="extra-icon"><i class="fas fa-book-open"></i></div>
+              <h4>Reading</h4>
+              <p>Avid reader of storybooks — fueling creativity, imagination, and storytelling</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PARTICIPATIONS SECTION ===== -->
+    <section class="participations" id="participations" data-scroll-section>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Events & Competitions</span>
+          <h2 class="section-title">Participations</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="participations-grid">
+
+          <!-- CodeSrijan -->
+          <div class="participation-card glass-card">
+            <div class="card-glow"></div>
+            <div class="part-icon-wrap">
+              <div class="part-icon"><i class="fas fa-code"></i></div>
+            </div>
+            <div class="part-badge national">🏆 National Level</div>
+            <h3>CodeSrijan — National Hackathon</h3>
+            <p>Participated in <strong>CodeSrijan</strong>, a national-level hackathon held at Jaypee University of Engineering and Technology, Guna. Collaborated with the team to build innovative tech solutions under real-world constraints.</p>
+            <div class="part-meta">
+              <span><i class="fas fa-map-marker-alt"></i> JUET, Guna</span>
+              <span><i class="fas fa-users"></i> National Level</span>
+            </div>
+            <button class="pill cert-btn" data-img="codesrijan-certificate.jpg" style="margin-top:1.2rem; border: 1px solid var(--accent); background: rgba(6,182,212,0.1); color: #fff; cursor: pointer;">
+              <i class="fas fa-certificate"></i> View Certificate
+            </button>
+          </div>
+
+          <!-- Shark Tank -->
+          <div class="participation-card glass-card">
+            <div class="card-glow"></div>
+            <div class="part-icon-wrap">
+              <div class="part-icon shark"><i class="fas fa-fish"></i></div>
+            </div>
+            <div class="part-badge event">🦈 Startup Pitch</div>
+            <h3>Shark Tank — JUET</h3>
+            <p>Pitched an innovative startup idea at <strong>Shark Tank JUET</strong>, held at Jaypee University of Engineering and Technology, Guna. Presented a business model to a panel of judges, demonstrating entrepreneurial thinking and problem-solving skills.</p>
+            <div class="part-meta">
+              <span><i class="fas fa-map-marker-alt"></i> JUET, Guna</span>
+              <span><i class="fas fa-lightbulb"></i> Entrepreneurship</span>
+            </div>
+            <button class="pill cert-btn" data-img="sharktank-certificate.jpg" style="margin-top:1.2rem; border: 1px solid var(--accent); background: rgba(6,182,212,0.1); color: #fff; cursor: pointer;">
+              <i class="fas fa-certificate"></i> View Certificate
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact" data-scroll-section>
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-class="is-inview">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="contact-content" data-scroll data-scroll-class="is-inview">
+          <div class="contact-text">
+            <p>I'm actively looking for internship opportunities in AI/ML and Data Science. If you have an exciting project or role in mind, let's connect!</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card glass-card" id="emailCard">
+              <div class="card-glow"></div>
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Email</span>
+                <span class="contact-value" id="emailValue">meghakundu.0701@gmail.com</span>
+              </div>
+              <button class="copy-btn" id="copyEmail" data-copy="meghakundu.0701@gmail.com" aria-label="Copy email">
+                <i class="fas fa-copy" id="copyEmailIcon"></i>
+              </button>
+            </div>
+
+            <div class="contact-card glass-card" id="phoneCard">
+              <div class="card-glow"></div>
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+91 8170888998</span>
+              </div>
+              <button class="copy-btn" id="copyPhone" data-copy="+918170888998" aria-label="Copy phone">
+                <i class="fas fa-copy" id="copyPhoneIcon"></i>
+              </button>
+            </div>
+
+            <div class="contact-card glass-card" id="locationCard">
+              <div class="card-glow"></div>
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">West Bengal, India</span>
+              </div>
+            </div>
+
+            <a href="https://linkedin.com/in/megha-kundu-672576285" target="_blank" rel="noopener" class="contact-card glass-card linkedin-card" id="linkedinCard">
+              <div class="card-glow"></div>
+              <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">megha-kundu-672576285</span>
+              </div>
+              <i class="fas fa-external-link-alt contact-arrow"></i>
+            </a>
+          </div>
+
+          <div class="contact-cta">
+            <a href="mailto:meghakundu.0701@gmail.com" class="btn btn-primary btn-large" id="emailBtn">
+              <i class="fas fa-paper-plane"></i>
+              <span>Send Me an Email</span>
+            </a>
+            <a href="https://linkedin.com/in/megha-kundu-672576285" target="_blank" rel="noopener" class="btn btn-ghost" id="linkedinBtn">
+              <i class="fab fa-linkedin"></i>
+              <span>Connect on LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" data-scroll-section>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-bracket">&lt;</span>MK<span class="logo-bracket">/&gt;</span>
+          </div>
+          <p class="footer-text">Designed & Built with <span class="heart">♥</span> by Megha Kundu</p>
+          <p class="footer-sub">AI/ML & Data Science Enthusiast · West Bengal, India</p>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 Megha Kundu. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- end smooth-wrapper -->
+
+  <!-- Copy toast notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMsg">Copied to clipboard!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script type="module" src="script.js"></script>
+  <!-- Certificate Modal -->
+  <div id="certModal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(3,7,18,0.88);backdrop-filter:blur(14px);align-items:center;justify-content:center;padding:1.5rem;">
+    <div id="certModalInner" style="position:relative;max-width:820px;width:100%;border-radius:14px;overflow:hidden;border:1px solid rgba(6,182,212,0.35);box-shadow:0 0 60px rgba(6,182,212,0.18),0 30px 60px rgba(0,0,0,0.7);">
+      <button id="certModalClose" style="position:absolute;top:12px;right:12px;z-index:10;background:rgba(3,7,18,0.85);border:1px solid rgba(6,182,212,0.4);border-radius:50%;width:38px;height:38px;color:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="certModalImg" src="" alt="Certificate of Excellence" style="width:100%;height:auto;display:block;">
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const modal      = document.getElementById('certModal');
+      const inner      = document.getElementById('certModalInner');
+      const closeBtn   = document.getElementById('certModalClose');
+      const modalImg   = document.getElementById('certModalImg');
+
+      function openModal(src) {
+        modalImg.src = src;
+        modal.style.display = 'flex';
+        requestAnimationFrame(() => {
+          modal.style.opacity = '1';
+          inner.style.transform = 'scale(1)';
+        });
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.style.opacity = '0';
+        inner.style.transform = 'scale(0.85)';
+        setTimeout(() => { modal.style.display = 'none'; document.body.style.overflow = ''; }, 300);
+      }
+
+      modal.style.transition = 'opacity 0.3s ease';
+      modal.style.opacity = '0';
+      inner.style.transition = 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1)';
+      inner.style.transform = 'scale(0.85)';
+
+      document.querySelectorAll('.cert-btn').forEach(btn => {
+        btn.addEventListener('click', () => openModal(btn.dataset.img));
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    })();
+  </script>
+
+</body>
+</html>

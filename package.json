@@ -1,0 +1,14 @@
+{
+  "name": "megha-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium AI/ML Portfolio for Megha Kundu",
+  "scripts": {
+    "dev": "vite --port 3000 --open",
+    "build": "vite build",
+    "preview": "vite preview --port 3000"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
